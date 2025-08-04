@@ -1,23 +1,23 @@
-import type { Metadata } from 'next'
-import { Inter, Fredoka } from 'next/font/google'
-import './globals.css'
+import './globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const fredoka = Fredoka({ subsets: ['latin'], variable: '--font-fredoka' })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Arya's 3D Creations - Amazing Toys & Fidgets by a 10-Year-Old Maker",
-  description: 'Discover unique 3D printed toys and fidgets created by Arya, a talented 10-year-old entrepreneur. Custom designs, quality prints, and endless fun!',
-}
+  title: "Nimble Ship  3D Creations - Amazing 3D Printed Toys & Fidgets",
+  description: 'Discover unique 3D printed toys and fidgets created by 10-year-old entrepreneur Arya. Custom designs, high-quality prints, and joy in every piece.',
+  keywords: '3D printing, toys, fidgets, entrepreneur, custom designs, kids business',
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${fredoka.variable} font-sans`}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
-  )
+  );
 }
